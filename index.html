@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <style>
+        .sort {
+            width: 200px;
+            height: 30px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <select name="sort" id="sortSelect">
+        <option value="default">Выберите сортировку</option>
+        <option value="ascending">По возрастанию</option>
+        <option value="descending">По убыванию</option>
+    </select>
+    <script>
+        sortSelect.addEventListener('change', function (e) {
+            const sortValue = this.value
+            if (sortValue === 'ascending') {
+                console.log('Сортировка от меньшего к большему');
+            } else if (sortValue === 'descending') {
+                console.log('Сортировка от большего к меньшему');
+            }
+        });
+    </script>
+</body>
+
+</html>
